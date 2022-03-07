@@ -1,0 +1,365 @@
+/* ------------------------------- 0. Imports & Variables -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
+
+:root {
+    --clr-bg: #4845E4;
+    --clr-bg-light:#F3F6F9;
+    --clr-special-text: white;
+    --clr-standard-text: #0C0C0C;
+    --clr-accent:#5722CD;
+    --clr-accent-light:#F2F0FF;
+    --clr-button:#ED4385;
+    --clr-service-tile: #7A7A7A;
+    --ff-header:'Merriweather', sans-serif;
+    --ff-body: 'Roboto', sans-serif;
+}
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: var(--ff-body);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--ff-header);
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+.content-container {
+    width: 600px;
+    text-align: center;
+    padding: 50px 10px 10px 10px;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Navigation ------------------- */
+
+nav {
+    width: 100%;
+    background-color:var(--clr-bg);
+    color:var(--clr-special-text);
+    background-image: url("assets/noise-texture.png");
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    color:white;
+    list-style: none;
+    column-gap: 100px;
+}
+
+nav ul a:link{
+    text-decoration: none;
+    color:white;
+}
+
+nav ul a:visited {
+    text-decoration: none;
+    color:white;
+}
+
+/* --------------- 4.2 Header ------------------- */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    background-color:var(--clr-bg);
+    color:var(--clr-special-text);
+    background-image: url("assets/noise-texture.png");
+    position: relative;
+    padding: 0px 40px 175px 40px
+}
+
+header p {
+    padding:10px;
+}
+
+button {
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+    background-color:var(--clr-button);
+    border-radius: 50px;
+    width: 200px;
+    padding: 10px;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------- 4.3 About us ------------------- */
+
+#about-us {
+    display: flex;
+    justify-content: center;
+    color: var(--clr-bg);
+    position: relative;
+    padding: 100px 10px 100px 10px;
+}
+
+#about-us h3 {
+    padding:10px;
+}
+
+
+#about-us p {
+    font-size: smaller;
+    color:black;
+    padding: 50px
+}
+
+#about-us a:link,#about-us a:visited {
+    color: var(--clr-bg);
+    text-decoration: none;
+}
+
+/* --------------- 4.4 case Studies ------------------- */
+
+#case-studies {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--clr-bg-light);
+    position: relative;
+    z-index: 1;
+    padding: 150px 10px 150px 10px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 1000px;
+    margin: 30px;
+    gap: 10px;
+    padding: 40px 0 70px 0;
+}
+
+.projects-text {
+    padding: 30px;
+}
+
+.projects p {
+    margin: 20px 20px 20px 0;
+}
+
+.projects h4 {
+    margin: 10px 0 10px 0;
+}
+
+.rev {
+    flex-direction: row-reverse;
+}
+
+.project-img {
+    width: 700px;
+    height: 350px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+.projects-rev {
+    width: 500px;
+    height: 250px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin: 10px;
+}
+
+/* --------------- 4.5 Services ------------------- */
+.services {
+    display: flex;
+    justify-content: center;
+    padding: 150px 10px 150px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+#services img {
+    height: 75px;
+    width: 75px;
+}
+
+#services article {
+    width: 325px;
+    height: 325px;
+    border: 1px solid blue;
+    margin:20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+
+}
+
+#services h4 {
+    color: var(--clr-accent);
+    margin: 0 0 15px 0;
+}
+
+#services p {
+    font-size: smaller
+}
+
+/* --------------- 4.6 Contact us ------------------- */
+
+#contact-us {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color:var(--clr-bg);
+    color:var(--clr-special-text);
+}
+
+#contact-us h2 {
+    margin: 80px 0 10px 0;
+    font-size: 30px;
+}
+
+#contact-us p {
+    margin: 10px 0 20px 0;
+    font-size: smaller;
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px 0 40px 0
+}
+
+#contact-us input{
+    width: 100%;
+    height: 40px;
+    margin: 0 0 20px 0;
+
+}
+
+#contact-us textarea {
+    width: 100%;
+}
+
+#contact-us button {
+    align-self: center;
+    padding: 15px;
+    color: white;
+    width: 150px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-us label {
+    font-size: smaller;
+}
+
+/* --------------- 4.7 Footer ------------------- */
+
+footer {
+    background: black ;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding:15px;
+    font-size: 9px;
+}
+
+/* --------------- 4.8 Artwork ------------------- */
+
+.squiggle {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: 0;
+}
+
+.border-blue::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid var(--clr-bg);
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.border-white::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid white;
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.border-grey::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid var(--clr-bg-light);
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.service-art::after {
+    content: "services";
+    position: absolute;
+    font-size: 250px;
+    left: calc(50% - 450px);
+    bottom: calc(50% + 270px);
+    z-index: -1;
+    opacity: 0.1;
+    color: var(--clr-accent);
+}
+
+.hello-art::after {
+    content: "hello";
+    position: absolute;
+    font-size: 300px;
+    left: calc(50% - 310px);
+    bottom: calc(50% - 150px);
+    z-index: -1;
+    color: var(--clr-bg);
+    opacity: 0.1;
+}
+
+.work-art::after {
+    content: "work";
+    position: absolute;
+    font-size: 400px;
+    left: calc(50% - 400px);
+    bottom: calc(50% + 470px);
+    z-index: -1;
+    color: white;
+}
